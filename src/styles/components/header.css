@@ -1,0 +1,7 @@
+header {
+  max-height: 10vh;
+  min-height: 4vh;
+  padding-block: 5px;
+  background-color: var(--navbcolor);
+  width: 100%;
+}

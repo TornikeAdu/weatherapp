@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  padding-inline: 10px;
+}
+
+.nav-links {
+  display: flex;
+  flex: 10;
+  justify-content: center;
+  gap: 5px;
+}
+
+a {
+  color: var(--bcolor);
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+  color: var(--btnfcolor);
+}
+
+.common-btns {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  gap: 10px;
+  margin-right: auto;
+  flex: 1;
+}
+
+.common-btns button {
+  background-color: var(--navbcolor);
+  color: var(--navfcolor);
+}
+
+.common-btns button:hover {
+  border-color: var(--btnbcolor);
+}
+.common-btns button:focus,
+.common-btns button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.common-btns button:last-child {
+  background-color: var(--bcolor);
+}
