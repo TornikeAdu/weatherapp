@@ -4,6 +4,8 @@
   --navbcolor: #252525;
   --navfcolor: #fff;
   --btnborcolor: #fff;
+  --mainbtncolor: #252525;
+  --mainbtnfcolor: #fff;
   --svg-collor: invert(0%) sepia(8%) saturate(7500%) hue-rotate(154deg)
     brightness(0%) contrast(102%);
 }
@@ -35,7 +37,9 @@
   --fcolor: #fff;
   --btnbcolor: #fff;
   --btnfcolor: #000;
-  --btnborcolor: #000;
+  --btnborcolor: #252525;
+  --mainbtncolor: #fff;
+  --mainbtnfcolor: #000;
   --svg-collor: none;
 }
 

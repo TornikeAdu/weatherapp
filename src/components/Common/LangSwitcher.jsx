@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const LangSwitcher = () => {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useLocalStorage('language', 'en');
 
   const toggleLanguage = () => {
     const newLanguage = language === 'en' ? 'ge' : 'en';
-    i18n.changeLanguage(newLanguage);
     setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
-    <button className="lang-switcher-button" onClick={toggleLanguage}>
-      {language === 'en' ? 'EN' : 'GE'}
-    </button>
+    <button onClick={toggleLanguage}>{language === 'en' ? 'EN' : 'GE'}</button>
   );
 };
 

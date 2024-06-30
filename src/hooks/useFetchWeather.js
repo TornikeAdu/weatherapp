@@ -1,31 +1,28 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
+import { fetchWeatherData, fetchForecastData } from '../api/weatherApi';
 
-const useFetchWeather = (city) => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+const useFetchWeather = () => {
+  const [weather, setWeather] = useState(null);
+  const [forecast, setForecast] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const URL = 'https://api.openweathermap.org/data/2.5/';
-  const apiKey = '887aaff89bee4fd742287bfd4afa2483';
 
-  useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        const response = await axios.get(
-          `${URL}weather?q=${city}&appid=${apiKey}&units=metric`
-        );
-        setData(response.data);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const fetchWeather = async (location) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const weatherData = await fetchWeatherData(location);
+      setWeather(weatherData);
+      const forecastData = await fetchForecastData(location);
+      setForecast(forecastData);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchWeather();
-  }, [city]);
-
-  return { data, loading, error };
+  return { weather, forecast, loading, error, fetchWeather };
 };
 
 export default useFetchWeather;

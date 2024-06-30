@@ -5,5 +5,16 @@
   "title": "Weather Forecast",
   "temp": "Temperature",
   "weather": "Weather",
-  "humidity": "Humidity"
+  "humidity": "Humidity",
+  "aboutus": "About Us",
+  "aboutdesc": "Project By Tornike Aduashvili",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Submit",
+  "contactus": "Contact Us",
+  "entercity": "Enter City",
+  "fetchcity": "Submit",
+  "currweather": "Current Weather",
+  "forecast": "Forecast"
 }

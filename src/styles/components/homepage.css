@@ -1,0 +1,70 @@
+input {
+  background-color: rgb(66, 66, 66);
+  color: white;
+  height: 2em;
+  font-size: 20px;
+  border-width: 0px;
+  border-radius: 8px;
+  padding-left: 10px;
+  margin-inline: 10px;
+}
+
+input:hover {
+  outline-style: solid;
+  outline-color: wheat;
+}
+
+.submit {
+  background-color: var(--mainbtncolor);
+  color: var(--mainbtnfcolor);
+}
+
+.forecast-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-data {
+  display: flex;
+  overflow-x: hidden; /* Initially hide horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+  white-space: nowrap; /* Prevent forecast items from wrapping */
+  margin-inline: 350px;
+  gap: 10px;
+}
+
+.forecast-data.scrollable {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.forecast-item {
+  min-width: 212px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: var(--btnfcolor);
+}
+
+@media screen and (max-width: 600px) {
+  .forecast-data {
+    margin-inline: 100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .forecast-data {
+    margin-inline: 75px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .forecast-data {
+    margin-inline: 95px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .forecast-data {
+    margin-inline: 80px;
+  }
+}

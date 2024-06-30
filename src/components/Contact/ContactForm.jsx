@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useTranslation } from 'react-i18next';
 
 const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -10,6 +11,8 @@ const schema = yup.object().shape({
 });
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const {
     register,
     handleSubmit,
@@ -25,21 +28,21 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">{t('name')}</label>
         <input id="name" {...register('name')} />
         {errors.name && <p>{errors.name.message}</p>}
       </div>
       <div>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">{t('email')}</label>
         <input id="email" {...register('email')} />
         {errors.email && <p>{errors.email.message}</p>}
       </div>
       <div>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">{t('message')}</label>
         <textarea id="message" {...register('message')}></textarea>
         {errors.message && <p>{errors.message.message}</p>}
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">{t('submit')}</button>
     </form>
   );
 };
