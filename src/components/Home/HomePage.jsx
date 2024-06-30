@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import '../../styles/components/homepage.css';
 
 const HomePage = () => {
-  const [city, setCity] = useState('Tbilisi'); //! წაშალე მე ეს არ დატოვო დეფაულტად თბილისი
+  const [city, setCity] = useState('');
   const { weather, forecast, loading, error, fetchWeather } = useFetchWeather();
   const { t } = useTranslation();
 
