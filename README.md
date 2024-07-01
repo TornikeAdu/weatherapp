@@ -31,7 +31,7 @@ Make sure you have the following installed:
 
 - Node.js (v14 or later)
 - npm (comes with Node.js)
-- API is integrated. No additional instructions are required
+- API key is integrated. No additional instructions are required
 
 ## Screenshots
 
