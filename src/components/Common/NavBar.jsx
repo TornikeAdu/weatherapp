@@ -19,13 +19,13 @@ const NavBar = () => {
         &#9776;
       </div>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={toggleNavbar}>
+        <Link to="/">
           <button>{t('home')}</button>
         </Link>
-        <Link to="/about" onClick={toggleNavbar}>
+        <Link to="/about">
           <button>{t('about')}</button>
         </Link>
-        <Link to="/contact" onClick={toggleNavbar}>
+        <Link to="/contact">
           <button>{t('contact')}</button>
         </Link>
       </div>

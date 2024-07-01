@@ -18,9 +18,11 @@
 
 .nav-links.open {
   display: flex;
-  flex-direction: column;
-  position: static;
-  transform: none;
+  justify-content: center;
+  gap: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hamburger {
@@ -84,6 +86,10 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 2px;
+    position: relative;
+    left: 0;
+    transform: none;
   }
 
   .hamburger {
