@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 const WeatherSummary = ({ weather, forecast, city }) => {
   const { t } = useTranslation();
-  const forecastRef = useRef(null); // Initialize useRef with null
+  const forecastRef = useRef(null);
 
   const handleMouseEnter = () => {
     if (forecastRef.current) {

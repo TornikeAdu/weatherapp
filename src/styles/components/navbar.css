@@ -91,7 +91,6 @@ button {
   }
 
   .common-btns {
-    /* width: 100%; */
     justify-content: space-between;
   }
 }

@@ -26,15 +26,15 @@ input:hover {
 
 .forecast-data {
   display: flex;
-  overflow-x: hidden; /* Initially hide horizontal scrolling */
-  overflow-y: hidden; /* Hide vertical scrolling */
-  white-space: nowrap; /* Prevent forecast items from wrapping */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
   margin-inline: 350px;
   gap: 10px;
 }
 
 .forecast-data.scrollable {
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #ccc transparent;
 }
