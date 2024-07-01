@@ -4,13 +4,30 @@
   justify-content: space-between;
   align-content: center;
   padding-inline: 10px;
+  position: relative;
 }
 
 .nav-links {
   display: flex;
-  flex: 10;
   justify-content: center;
   gap: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  transform: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
 }
 
 a {
@@ -25,11 +42,10 @@ button {
 
 .common-btns {
   display: flex;
-  justify-content: left;
+  justify-content: right;
   flex-direction: row;
   gap: 10px;
-  margin-right: auto;
-  flex: 1;
+  margin-left: auto;
 }
 
 .common-btns button {
@@ -40,6 +56,7 @@ button {
 .common-btns button:hover {
   border-color: var(--btnbcolor);
 }
+
 .common-btns button:focus,
 .common-btns button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -47,4 +64,34 @@ button {
 
 .common-btns button:last-child {
   background-color: var(--bcolor);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 20px;
+    gap: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .common-btns {
+    /* width: 100%; */
+    justify-content: space-between;
+  }
 }

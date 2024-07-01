@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-input,
+.form-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-input label,
+.form-text label {
+  margin-bottom: 5px;
+}
+
+.form-text textarea {
+  width: 316px;
+  height: 80px;
+}
+
+.form button {
+  background-color: var(--mainbtncolor);
+  color: var(--mainbtnfcolor);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  border-color: var(--btnborcolor);
+}
+
+.form button:focus,
+.form button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

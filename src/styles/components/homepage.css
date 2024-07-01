@@ -68,3 +68,15 @@ input:hover {
     margin-inline: 80px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .forecast-data {
+    margin-inline: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .submit {
+    margin-top: 10px;
+  }
+}

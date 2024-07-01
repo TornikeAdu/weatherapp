@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
+import '../../styles/components/contactpage.css';
 
 const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -26,24 +27,30 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <label htmlFor="name">{t('name')}</label>
-        <input id="name" {...register('name')} />
-        {errors.name && <p>{errors.name.message}</p>}
-      </div>
-      <div>
-        <label htmlFor="email">{t('email')}</label>
-        <input id="email" {...register('email')} />
-        {errors.email && <p>{errors.email.message}</p>}
-      </div>
-      <div>
-        <label htmlFor="message">{t('message')}</label>
-        <textarea id="message" {...register('message')}></textarea>
-        {errors.message && <p>{errors.message.message}</p>}
-      </div>
-      <button type="submit">{t('submit')}</button>
-    </form>
+    <div className="form">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-input">
+          <label htmlFor="name">{t('name')}</label>
+          <input id="name" {...register('name')} />
+          {errors.name && <p>{errors.name.message}</p>}
+        </div>
+        <div className="form-input">
+          <label htmlFor="email">{t('email')}</label>
+          <input id="email" {...register('email')} />
+          {errors.email && <p>{errors.email.message}</p>}
+        </div>
+        <div className="form-text">
+          <label htmlFor="message">{t('message')}</label>
+          <textarea
+            id="message"
+            {...register('message')}
+            placeholder="Type message.."
+          ></textarea>
+          {errors.message && <p>{errors.message.message}</p>}
+        </div>
+        <button type="submit">{t('submit')}</button>
+      </form>
+    </div>
   );
 };
 
